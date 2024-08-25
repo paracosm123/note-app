@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import "./main.css"
 import NoteAPI from './NoteAPI';
+import Rectangle7 from './assets/Rectangle7.png';
+import Pencil from "./assets/pencil.png";
+import Bin from "./assets/bin.png";
+import Add from './assets/add.png';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -81,7 +85,7 @@ function App() {
     <>
       <div className="navbar">
           <div className="logo">
-            <img src="src\assets\Rectangle7.png" alt="logo" height="40px"/>
+            <img src={Rectangle7} alt="logo" height="40px"/>
           </div>
           <h1>Paracosm's Note App</h1>
         </div>
@@ -99,12 +103,12 @@ function App() {
                   <div className="note-list-item-buttons">
                      <div className="note-list-item-buttons-delete">
                          <button onClick={() => handleNoteDelete(note.id)}>
-                            <img src="src\assets\bin.png" height="15px" width="15px"></img>
+                            <img src={Bin} height="15px" width="15px"></img>
                          </button>
                      </div>
                      <div className="note-list-item-buttons-edit">
                          <button onClick={() => handleNoteEdit(note)}>
-                            <img src="src\assets\pencil.png" height="15px" width="15px"></img>
+                            <img src={Pencil} height="15px" width="15px"></img>
                          </button>
                       </div>
                    </div>
@@ -130,7 +134,7 @@ function App() {
         </div>
         <div className='button-add-note'>
             <button onClick={handleNoteAdd}>
-              <img src="src\assets\add.png" height="15px" width="15px"></img>
+              <img src={Add} height="15px" width="15px"></img>
             </button>
         </div>
 
